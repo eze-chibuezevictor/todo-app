@@ -10,12 +10,11 @@ const path = require('path')  // ADD THIS
 app.use(express.json())
 
 // SERVE STATIC FILES FROM FRONTEND FOLDER
-app.use(express.static(path.join(__dirname, '../frontend')))
+app.use(express.static(path.join(__dirname, '../frontend/bootstrap-5.2.3-dist')))
 
 
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/index.html'))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/bootstrap-5.2.3-dist/index.html'))
 })
 
 

@@ -61,6 +61,7 @@ async function getTodo() {
 }
 
  function displayTodo(todos){
+     cardBody.innerHTML = '' 
     console.log(todos)
     todos.todo.forEach(i => {
        
@@ -153,7 +154,7 @@ async function getTodo() {
 
  }
 
- 
+
   getTodo()
     
  
@@ -165,7 +166,7 @@ async function getTodo() {
         const response= await fetch(`${api}/${id}`,{
             method:'DELETE'
         })
-        const result = await response.json
+        const result = await response.json()
         console.log(`delete ${result}`)
          await getTodo()  
        

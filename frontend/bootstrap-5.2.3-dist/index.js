@@ -31,7 +31,7 @@ async function getTodo() {
 
 }
 
- //getTodo()
+ getTodo()
 
  async function  postTodo() {
     if( !input.value.trim()) return
@@ -48,6 +48,8 @@ async function getTodo() {
            
         })
         console.log(response)
+
+         await getTodo()  
 
 
         
@@ -150,6 +152,8 @@ async function getTodo() {
 
 
  }
+
+ 
   getTodo()
     
  
@@ -163,6 +167,7 @@ async function getTodo() {
         })
         const result = await response.json
         console.log(`delete ${result}`)
+         await getTodo()  
        
         
     } catch (error) {
@@ -188,6 +193,7 @@ async function getTodo() {
     const data =await response.json()
     console.log(response)
  console.log(data)
+  await getTodo()  
 
     
    } catch (error) {

@@ -1,4 +1,4 @@
-const api = 'http://localhost:9000/api/todo'
+const api = 'https://todo-app-backend-a6km.onrender.com/api/todo'
 const input = document.getElementById('form')
 const cardBody = document.querySelector('.card-body')
 
@@ -175,7 +175,7 @@ async function getTodo() {
   async function comTodo( newstatus,id)  {
     console.log(newstatus,id)
    try {
-    const response = await fetch(`http://localhost:9000/api/todo/${id}`,{
+    const response = await fetch(`${api}/${id}`,{
         method:'PATCH',
         headers:{
            'Content-Type':'application/json'

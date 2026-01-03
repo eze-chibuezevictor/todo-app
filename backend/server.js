@@ -6,9 +6,16 @@ app.use(cors())
 app.use(express.json())
 let db = require('./connect.js')
 db.configure('busyTimeout',5000)
+const path = require('path')  // ADD THIS
+app.use(express.json())
 
-app.get('/',(req,res)=>{
-    res.status(200).send('hello world')
+// SERVE STATIC FILES FROM FRONTEND FOLDER
+app.use(express.static(path.join(__dirname, '../frontend')))
+
+
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/index.html'))
 })
 
 

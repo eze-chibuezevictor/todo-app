@@ -1,5 +1,5 @@
 const sqlite3 = require('sqlite3').verbose()
-const db = new sqlite3.Database('./fourthtodo.db', sqlite3.OPEN_READWRITE, connected )
+const db = new sqlite3.Database('/tmp/fourthtodo.db', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, connected )
 db.configure('busyTimeout',5000)
 
 

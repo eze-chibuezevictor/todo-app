@@ -48,6 +48,7 @@ async function getTodo() {
            
         })
         console.log(response)
+        const data = await response.json()
 
          await getTodo()  
 

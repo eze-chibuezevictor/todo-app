@@ -150,12 +150,15 @@ async function getTodo() {
     });
 
    
-
+getTodo()
+location.reload()
 
  }
 
+ getTodo()
 
-  getTodo()
+
+  
     
  
  
